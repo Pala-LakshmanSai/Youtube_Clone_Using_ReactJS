@@ -3,7 +3,7 @@ export const AppBar = () => {
     <div className="fixed w-full bg-white">
       <div className=" flex justify-between items-center p-3 px-8">
         <div>
-          <img src="../../public/youtube.png" alt="" className="h-10" />
+          <img src="/youtube.png" alt="" className="h-10" />
         </div>
         <div className="flex rounded-full border-2 border-gray-300 items-center pr-2 bg-gray-100">
           <input

@@ -1,6 +1,8 @@
-@media (max-width: 1000px) {
+@media (max-width: 1280px) {
   .side-bar {
     width: 80px;
   }
-  
+  .category-name {
+    display: none;
+  }
 }

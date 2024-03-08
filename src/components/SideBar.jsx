@@ -1,90 +1,88 @@
+import { useState } from "react";
 import "./SideBarr.css";
 export const SideBar = () => {
-  const categories = [
+  const [categories, setCategories] = useState([
     {
-      emoji: "🔥",
+      emoji: "🔥 ",
       name: "Trending",
     },
     {
-      emoji: "🛒",
+      emoji: "🛒 ",
       name: "Shopping",
     },
     {
-      emoji: "🔥",
-      name: "Trending",
+      emoji: "🎧 ",
+      name: "Music",
     },
     {
-      emoji: "🔥",
-      name: "Trending",
+      emoji: "🎞️ ",
+      name: "Films",
     },
     {
-      emoji: "🔥",
-      name: "Trending",
+      emoji: "🎙️ ",
+      name: "Live",
     },
     {
-      emoji: "🔥",
-      name: "Trending",
+      emoji: "🎮 ",
+      name: "Gaming",
     },
     {
-      emoji: "🔥",
-      name: "Trending",
+      emoji: "📰 ",
+      name: "News",
     },
     {
-      emoji: "🔥",
-      name: "Trending",
+      emoji: "🏆 ",
+      name: "Sport",
     },
     {
-      emoji: "🔥",
-      name: "Trending",
+      emoji: "💡 ",
+      name: "Learning",
     },
     {
-      emoji: "🔥",
-      name: "Trending",
+      emoji: "🎙️ ",
+      name: "Podcast",
     },
     {
-      emoji: "🔥",
-      name: "Trending",
+      emoji: "🧳 ",
+      name: "Travel",
     },
     {
-      emoji: "🔥",
-      name: "Trending",
+      emoji: "🌄 ",
+      name: "Photography",
     },
-  ];
+  ]);
   return (
-    <div className="fixed flex flex-col justify-evenly  h-screen w-48 text-left text-md font-normal -mt-5 side-bar">
-      <div className="overflow-hidden hover:overflow-scroll pl-9 pt-2">
-        <div className="hover:cursor-pointer py-5">🏠︎ Home</div>
-        <div className="hover:cursor-pointer py-5">▶️ Shorts</div>
-        <div className="hover:cursor-pointer py-5">🎬 Subscriptions</div>
-        <div
-          className="w-44 -ml-9"
-          style={{ borderBottom: "1px solid gray" }}
-        ></div>
-        <div className="hover:cursor-pointer py-5">👨🏽‍💻 You</div>
-        <div className="hover:cursor-pointer py-5">⌛ History</div>
-        <div
-          className="w-44 -ml-9"
-          style={{ borderBottom: "1px solid gray" }}
-        ></div>
+    <div className="fixed flex flex-col justify-evenly  h-screen text-left text-md font-normal -mt-5">
+      <div className="overflow-hidden hover:overflow-scroll w-56 pl-9 pt-2">
+        <div className="hover:cursor-pointer py-6">
+          <span>🏠︎ </span> <span>Home</span>
+        </div>
+        <div className="hover:cursor-pointer py-6">
+          <span>▶️ </span> <span>Shorts</span>
+        </div>
+        <div className="hover:cursor-pointer py-6">
+          <span>🎬</span> <span>Subscriptions</span>
+        </div>
+        {/* <div className="w-52 -ml-9 border-b-2 border"></div> */}
+        <div className="hover:cursor-pointer py-6">
+          <span>👨🏽‍💻 </span>
+          <span>You</span>
+        </div>
+        <div className="hover:cursor-pointer py-6">
+          <span>⌛ </span>
+          <span> History</span>
+        </div>
+        {/* <div className="w-52 -ml-9 border-b-2 border"></div> */}
         <div className="hover:cursor-pointer py-5 -ml-1 text-lg font-semibold">
           Explore
         </div>
-        <div className="hover:cursor-pointer py-5">🔥 Trending</div>
-        <div className="hover:cursor-pointer py-5">🛒 Shopping</div>
-        <div className="hover:cursor-pointer py-5">🎧Music</div>
-        <div className="hover:cursor-pointer py-5">🎞️ Films</div>
-        <div className="hover:cursor-pointer py-5">🎙️Live</div>
-        <div className="hover:cursor-pointer py-5">🎮 Gaming</div>
-        <div className="hover:cursor-pointer py-5">📰 News</div>
-        <div className="hover:cursor-pointer py-5">🏆 Sport</div>
-        <div className="hover:cursor-pointer py-5">💡Learning</div>
-        <div className="hover:cursor-pointer py-5">🎙️ Podcast</div>
-        <div className="hover:cursor-pointer py-5">💡Learning</div>
-        <div className="hover:cursor-pointer py-5">💡Learning</div>
-        <div className="hover:cursor-pointer py-5">💡Learning</div>
-        <div className="hover:cursor-pointer py-5">💡Learning</div>
+        {categories.map((category, index) => (
+          <div key={index} className="cursor-pointer py-6">
+            <span>{category.emoji}</span>
+            <span>{category.name}</span>
+          </div>
+        ))}
       </div>
     </div>
   );
 };
-<div className="hover:cursor-pointer">💡Learning</div>;
