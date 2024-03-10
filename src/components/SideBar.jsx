@@ -63,7 +63,6 @@ export const SideBar = () => {
         <div className="hover:cursor-pointer py-6">
           <span>🎬</span> <span>Subscriptions</span>
         </div>
-        {/* <div className="w-52 -ml-9 border-b-2 border"></div> */}
         <div className="hover:cursor-pointer py-6">
           <span>👨🏽‍💻 </span>
           <span>You</span>
@@ -72,7 +71,6 @@ export const SideBar = () => {
           <span>⌛ </span>
           <span> History</span>
         </div>
-        {/* <div className="w-52 -ml-9 border-b-2 border"></div> */}
         <div className="hover:cursor-pointer py-5 -ml-1 text-lg font-semibold">
           Explore
         </div>
